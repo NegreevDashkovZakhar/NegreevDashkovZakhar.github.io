@@ -1,3 +1,133 @@
 body {
-  background-color: #251F47;
+  background-color: #251f47;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+.main__post {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: min-content;
+  width: 80%;
+  margin: 200px 10% 0 10%;
+}
+
+.main__left-column {
+  display: inline;
+  vertical-align: top;
+  height: min-content;
+  margin: 0;
+  padding: 0;
+}
+
+.main__right-column {
+  display: inline;
+  vertical-align: top;
+  height: min-content;
+  margin: 0;
+  padding: 0;
+}
+
+.main__title {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 96px;
+  line-height: 117%;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+  color: #71b48d;
+  text-shadow: 0 0 30px rgba(134, 203, 146, 0.75);
+
+  margin: 0;
+  padding: 0;
+}
+
+.main__job-name {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 117%;
+  text-transform: uppercase;
+  color: #71b48d;
+  margin: 31px 0 0 0;
+  padding: 0;
+}
+
+.main__icon {
+  width: 600px;
+  height: auto;
+  border: 3px solid #86cb92;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1850px) {
+  .main__title {
+    font-size: 90px;
+  }
+
+  .main__job-name {
+    font-size: 46px;
+  }
+
+  .main__icon {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 1650px) {
+  .main__title {
+    font-size: 82px;
+  }
+
+  .main__job-name {
+    margin-top: 23px;
+    font-size: 40px;
+  }
+
+  .main__icon {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .main__title {
+    font-size: 74px;
+  }
+
+  .main__job-name {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .main__title {
+    font-size: 68px;
+  }
+
+  .main__job-name {
+    font-size: 28px;
+  }
+
+  .main__icon {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .main__title {
+    font-size: 60px;
+  }
+
+  .main__job-name {
+    font-size: 24px;
+  }
+
+  .main__icon {
+    width: 250px;
+  }
 }
