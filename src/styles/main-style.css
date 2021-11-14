@@ -57,6 +57,17 @@ body {
   padding: 0;
 }
 
+.main__paragraph {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 145%;
+  text-align: justify;
+  color: #86cb92;
+  width: 81%;
+}
+
 .main__icon {
   width: 600px;
   height: auto;
@@ -103,6 +114,10 @@ body {
     font-size: 74px;
   }
 
+  .main__paragraph {
+    font-size: 30px;
+  }
+
   .main__job-name {
     font-size: 32px;
   }
@@ -135,6 +150,10 @@ body {
     font-size: 24px;
   }
 
+  .main__paragraph {
+    font-size: 24px;
+  }
+
   .main__icon {
     width: 250px;
   }
@@ -153,6 +172,10 @@ body {
     font-size: 20px;
   }
 
+  .main__paragraph {
+    font-size: 20px;
+  }
+
   .main__icon {
     width: 200px;
   }
@@ -164,6 +187,10 @@ body {
   }
 
   .main__job-name {
+    font-size: 16px;
+  }
+
+  .main__paragraph {
     font-size: 16px;
   }
 
@@ -181,6 +208,10 @@ body {
     font-size: 14px;
   }
 
+  .main__paragraph {
+    font-size: 14px;
+  }
+
   .main__icon {
     width: 100px;
   }
@@ -193,6 +224,10 @@ body {
 
   .main__title {
     text-align: center;
+  }
+
+  .main__paragraph {
+    width: 100%;
   }
 
   .main__icon {
