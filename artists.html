@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/menu.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./scripts/start.js" defer></script>
+    <title>Все песни</title>
+  </head>
+  <body>
+    <header id="header">
+      <!-- Меню -->
+      <img src="./icons/menu.svg" class="menu-icon" id="menu-icon"/>
+      <h1 class="main-name">Tab'em</h1>
+      <!-- Гитара -->
+      <img src="./icons/guitar.svg" class="guitar-icon" />
+    </header>
+    <main class="main">
+      <h2 class="main__title">Все исполнители</h2>
+      <div class="main__search-block">
+        <input class="search-block__input" type="text" />
+        <!-- Увел. стекло -->
+        <img src="./icons/magnifier.svg" class="search-block__icon" />
+      </div>
+      <div class="list">
+        <p class="list__year">Песен</p>
+        <!-- Запись -->
+        <div class="list__entry">
+          <!-- Фото исполнителя -->
+          <img class="entry__image" src="./icons/basta.jpeg" />
+          <!-- Название песни -->
+          <!-- <a class="entry__song">"Сансара"</a> -->
+          <!-- <span> - </span> -->
+          <!-- Автор песни -->
+          <a class="entry__author">Баста</a>
+          <!-- Год песни -->
+          <p class="entry__year">10</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
