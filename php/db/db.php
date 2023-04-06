@@ -1,6 +1,7 @@
 <?php
 require '../db/model/songs_count.php';
 require '../db/model/song.php';
+require '../db/model/artist.php';
 
 function get_artists_songs_count()
 {
@@ -42,4 +43,21 @@ function get_all_songs()
     }
     pg_close($connect);
     return $array;
+}
+
+function get_artist($name)
+{
+    $connect = pg_connect('host=localhost port=5432 dbname=tab_em_db user=tab_em_user password=pass1234');
+    $result = pg_query(
+        $connect,
+        "SELECT 
+            artists.name,
+            artists.description
+        FROM artists 
+        WHERE artists.name='$name';"
+    );
+    $row = pg_fetch_row($result);
+    $artist = new Artist($row[0], $row[1]);
+    pg_close($connect);
+    return $artist;
 }
