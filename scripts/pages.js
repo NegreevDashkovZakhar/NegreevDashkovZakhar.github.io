@@ -2,7 +2,7 @@
 
 class PageCounter {
     currentValue=1;
-    pageSize=3;
+    pageSize=1;
     render() {
         const pagesDiv = document.getElementById('pages-div');
         pagesDiv.innerHTML = `
