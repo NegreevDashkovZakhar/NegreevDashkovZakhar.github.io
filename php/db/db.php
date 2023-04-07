@@ -45,6 +45,28 @@ function get_all_songs()
     return $array;
 }
 
+function get_songs($artist_id)
+{
+    $connect = pg_connect('host=localhost port=5432 dbname=tab_em_db user=tab_em_user password=pass1234');
+    $result = pg_query(
+        $connect,
+        "SELECT 
+            artists.name,
+            songs.name,
+            songs.year
+        FROM songs 
+        JOIN artists ON songs.artist_id=artists.id
+        WHERE artists.id='$artist_id';"
+    );
+    $array = array();
+    while ($row = pg_fetch_row($result)) {
+        $entry = new Song($row[0], $row[1], $row[2]);
+        $array[] = $entry;
+    }
+    pg_close($connect);
+    return $array;
+}
+
 function get_artist($name)
 {
     $connect = pg_connect('host=localhost port=5432 dbname=tab_em_db user=tab_em_user password=pass1234');
@@ -58,7 +80,7 @@ function get_artist($name)
         WHERE artists.name='$name';"
     );
     $row = pg_fetch_row($result);
-    $artist = new Artist($row[0], $row[1]);
+    $artist = new Artist($row[0], $row[1], $row[2]);
     pg_close($connect);
     return $artist;
 }

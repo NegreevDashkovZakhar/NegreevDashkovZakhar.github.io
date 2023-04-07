@@ -2,11 +2,13 @@
 
 class Artist
 {
+    public $id;
     public $name;
     public $description;
 
-    function __construct($name, $description)
+    function __construct($id, $name, $description)
     {
+        $this->id = $id;
         $this->name = $name;
         $this->description = $description;
     }
