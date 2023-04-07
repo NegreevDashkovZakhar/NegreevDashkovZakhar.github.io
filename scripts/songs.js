@@ -1,7 +1,7 @@
 import base_url from "./config.js";
 
 const renderSongs = async () => {
-    const result = await fetch('http://localhost/php/songs/all.php');
+    const result = await fetch(`${base_url}/php/songs/all.php`);
     const songs = await result.json();
     const entries_list = document.getElementById('entries_list');
     songs.forEach(song => {

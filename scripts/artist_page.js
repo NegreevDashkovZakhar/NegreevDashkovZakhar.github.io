@@ -1,10 +1,12 @@
+import base_url from "./config.js";
+
 const renderArtist = async () => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const artist_name = urlParams.get("artist_name");
 
   const result = await fetch(
-    `http://localhost/php/artists/by_name.php?name=${artist_name}`
+    `${base_url}/php/artists/by_name.php?name=${artist_name}`
   );
   const artist = await result.json();
 
@@ -20,7 +22,7 @@ const renderArtist = async () => {
     description.innerHTML += `<p class="artist__description" id="description">${paragraph}</p>`;
   }
 
-  const songs_result = await fetch(`http://localhost/php/songs/by_artist.php?id=${artist.id}`);
+  const songs_result = await fetch(`${base_url}/php/songs/by_artist.php?id=${artist.id}`);
   const songs = await songs_result.json();
   const entries_list = document.getElementById("entries_list");
   songs.forEach((song) => {

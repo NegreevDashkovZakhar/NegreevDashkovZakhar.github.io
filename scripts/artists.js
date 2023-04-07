@@ -1,7 +1,7 @@
 import base_url from './config.js';
 
 const renderArtists = async () => {
-  const result = await fetch("http://localhost/php/artists/songs_count.php");
+  const result = await fetch(`${base_url}/php/artists/songs_count.php`);
   const artists = await result.json();
   const entries_list = document.getElementById("entries_list");
   artists.forEach((artist) => {
