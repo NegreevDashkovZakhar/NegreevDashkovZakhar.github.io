@@ -1,0 +1,20 @@
+.song__title {
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.song__text {
+  font-size: 16px;
+  max-width: 600px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.song__chords {
+  display: block;
+  margin-top: 20px;
+}
+
+.song__chord {
+  width: 100px;
+}

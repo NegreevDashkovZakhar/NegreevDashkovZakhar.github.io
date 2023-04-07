@@ -4,6 +4,6 @@ require '../http/respond.php';
 require '../db/db.php';
 
 $id = $_GET["id"];
-$songs = get_artist_songs($id);
+$song = get_song($id);
 
-send_response($songs);
+send_response($song);
