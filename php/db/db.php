@@ -51,6 +51,7 @@ function get_artist($name)
     $result = pg_query(
         $connect,
         "SELECT 
+            artists.id,
             artists.name,
             artists.description
         FROM artists 
