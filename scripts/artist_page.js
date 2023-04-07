@@ -1,6 +1,3 @@
-const img_template =
-  '<img class="entry__image" src="./images/artists/${artist.artist_name}.jpg" />';
-
 const renderArtist = async () => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -13,6 +10,9 @@ const renderArtist = async () => {
 
   const image = document.getElementById("artist-image");
   image.setAttribute("src", `./images/artists/${artist.name}.jpg`);
+
+  const artistName = document.getElementById("artist-name");
+  artistName.innerText=artist.name;
 
   const description = document.getElementById("description-block");
   const paragraphs = artist.description.split("\n");
