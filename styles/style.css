@@ -79,6 +79,12 @@ header {
   margin: 10px 0 0 auto;
 }
 
+.entry__author,
+.entry__song {
+  text-decoration: none;
+  color: #000000;
+}
+
 .list__entry > a,
 span {
   margin-top: 10px;
