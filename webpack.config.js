@@ -32,7 +32,7 @@ module.exports = {
   devtool: 'source-map',
 
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     clean: true,
     assetModuleFilename: 'assets/[hash][ext][query]',
   },
