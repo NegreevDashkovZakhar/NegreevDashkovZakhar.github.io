@@ -1,6 +1,4 @@
-import Header from '@components/Header';
-import React from 'react';
-import {Outlet} from 'react-router-dom';
+// import Header from '@components/Header';
 
 interface LayoutProps {
   children: React.ReactElement;
@@ -9,7 +7,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({children}) => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       {children}
     </>
   );
