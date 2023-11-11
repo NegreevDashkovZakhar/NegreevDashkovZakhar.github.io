@@ -1,0 +1,20 @@
+@import '@styles/__defines.scss';
+
+.entry-window {
+  &__title {
+    color: $text;
+    text-shadow: 4px 4px 9.800000190734863px rgba(0, 0, 0, 0.35);
+    font-family: Comforta Light;
+    @include value-1400-460('font-size', 128, 54);
+    font-weight: 300;
+    font-variant: small-caps;
+    text-align: center;
+
+    @include value-1400-460('width', 1400, 460);
+
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+}
