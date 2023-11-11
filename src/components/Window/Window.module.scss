@@ -1,0 +1,12 @@
+@import '@styles/__defines.scss';
+
+.window {
+  background-color: $theme-1;
+  min-height: 100vh;
+
+  &__content {
+    margin: 0 auto;
+    @include value-1400-460('width', 1400, 460);
+    height: 100%;
+  }
+}
