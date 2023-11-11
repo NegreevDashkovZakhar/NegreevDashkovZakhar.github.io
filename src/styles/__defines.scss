@@ -1,3 +1,18 @@
-$text-1: #231942;
-$theme-1: #e0b1cb;
-$theme-2: #be95c4;
+$text: #37000a;
+$theme-1: #b3c2f2;
+$theme-2: #735cdd;
+
+$maxWidthContainer: 1400;
+$mobileContainer: 500;
+
+@mixin value-1400-460($property, $startSize, $minSize) {
+  $addSize: $startSize - $minSize;
+
+  #{$property}: $startSize + px;
+
+  @media (max-width: #{$maxWidthContainer + px}) {
+    #{$property}: calc(
+      #{$minSize + px} + #{$addSize} * ((100vw - #{$mobileContainer}px) / #{$maxWidthContainer - $mobileContainer})
+    );
+  }
+}
