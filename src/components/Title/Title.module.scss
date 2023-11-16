@@ -1,0 +1,9 @@
+@import '@styles/__defines.scss';
+
+.title {
+  color: $text;
+  font-family: $font;
+  font-weight: 300;
+
+  @include value-1400-460('font-size', 64, 42);
+}
