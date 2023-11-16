@@ -3,11 +3,11 @@ import Title from '@components/Title';
 import style from './ContactsWindow.module.scss';
 import Text from '@components/Text';
 
-const WelcomeWindow = () => {
+const ContactsWindow = () => {
   return (
     <Window>
-      <div className={style['welcome-window']}>
-        <Title className={style['welcome-window__title']}>Как со мной связаться</Title>
+      <div className={style['contacts-window']}>
+        <Title className={style['contacts-window__title']}>Как со мной связаться</Title>
         <Text>
           <>
             <p>
@@ -20,9 +20,10 @@ const WelcomeWindow = () => {
             <p>Жду твоего сообщения)</p>
           </>
         </Text>
+        <div className={style.contacts}></div>
       </div>
     </Window>
   );
 };
 
-export default WelcomeWindow;
+export default ContactsWindow;

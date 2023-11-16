@@ -3,11 +3,11 @@ import Title from '@components/Title';
 import style from './BioWindow.module.scss';
 import Text from '@components/Text';
 
-const WelcomeWindow = () => {
+const BioWindow = () => {
   return (
     <Window>
-      <div className={style['welcome-window']}>
-        <Title className={style['welcome-window__title']}>Немного обо мне</Title>
+      <div className={style['bio-window']}>
+        <Title className={style['bio-window__title']}>Немного обо мне</Title>
         <Text>
           <>
             <p>Меня зовут Захар, мне 21 и я учусь в ОмГТУ</p>
@@ -34,4 +34,4 @@ const WelcomeWindow = () => {
   );
 };
 
-export default WelcomeWindow;
+export default BioWindow;
