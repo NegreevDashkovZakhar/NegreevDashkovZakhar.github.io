@@ -3,6 +3,7 @@
 .window {
   background-color: $theme-1;
   min-height: 100vh;
+  padding-bottom: 10px;
 
   &__content {
     margin: 0 auto;

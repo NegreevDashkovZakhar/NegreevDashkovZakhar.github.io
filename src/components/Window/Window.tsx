@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 interface WindowProps {
   children: React.ReactElement;
-  className: string;
+  className?: string;
 }
 
 const Window: React.FC<WindowProps> = ({children, className = ''}) => {
