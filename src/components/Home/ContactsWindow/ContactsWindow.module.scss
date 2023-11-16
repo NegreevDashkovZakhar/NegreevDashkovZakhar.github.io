@@ -10,3 +10,16 @@
     @include value-1400-460('padding-bottom', 42, 26);
   }
 }
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 32px;
+
+  &__entry {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+}

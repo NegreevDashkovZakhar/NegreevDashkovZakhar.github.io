@@ -2,6 +2,8 @@ import Window from '@components/Window';
 import Title from '@components/Title';
 import style from './ContactsWindow.module.scss';
 import Text from '@components/Text';
+import tgIcon from '@assets/tg.svg';
+import vkIcon from '@assets/vk.svg';
 
 const ContactsWindow = () => {
   return (
@@ -20,7 +22,20 @@ const ContactsWindow = () => {
             <p>Жду твоего сообщения)</p>
           </>
         </Text>
-        <div className={style.contacts}></div>
+        <div className={style.contacts}>
+          <div className={style['contacts__entry']}>
+            <img src={tgIcon} alt="telegram icon" className={style['contacts__icon']} />
+            <Text>
+              <a href="https://t.me/Chai_s_Zakharom">https://t.me/Chai_s_Zakharom</a>
+            </Text>
+          </div>
+          <div className={style['contacts__entry']}>
+            <img src={vkIcon} alt="vk icon" className={style['contacts__icon']} />
+            <Text>
+              <a href="https://vk.com/do_si_do">https://vk.com/do_si_do</a>
+            </Text>
+          </div>
+        </div>
       </div>
     </Window>
   );
