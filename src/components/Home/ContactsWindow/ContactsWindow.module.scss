@@ -1,0 +1,12 @@
+@import '@styles/__defines.scss';
+
+.welcome-window {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  flex-direction: column;
+
+  &__title {
+    @include value-1400-460('padding-bottom', 42, 26);
+  }
+}
