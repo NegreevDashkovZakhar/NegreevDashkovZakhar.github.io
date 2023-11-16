@@ -1,0 +1,11 @@
+@import '@styles/__defines.scss';
+
+.text {
+  color: $text;
+  font-family: $font;
+  font-weight: 300;
+
+  @include value-1400-460('font-size', 32, 22);
+  @include value-1400-460('line-height', 42, 28);
+  @include value-1400-460('letter-spacing', 0.16px, 0.11px);
+}
