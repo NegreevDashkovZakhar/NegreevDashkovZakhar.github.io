@@ -1,0 +1,26 @@
+@import '@styles/__defines.scss';
+
+.welcome-window {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    @include value-1400-460('padding-bottom', 32, 16);
+  }
+
+  &__photo {
+    // height: 910px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: url('/assets/photoBridge.jpg'), lightgray 50% / cover no-repeat;
+
+    @include value-1400-460('width', 540, 360);
+    @include value-1400-460('height', 910, 770);
+  }
+}

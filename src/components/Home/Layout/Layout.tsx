@@ -1,9 +1,11 @@
-import EntryWindow from '@components/Home/EntryWindow';
+import EntryWindow from '../EntryWindow';
+import WelcomeWindow from '../WelcomeWindow';
 
 const Layout = () => {
   return (
     <>
       <EntryWindow />
+      <WelcomeWindow />
     </>
   );
 };
