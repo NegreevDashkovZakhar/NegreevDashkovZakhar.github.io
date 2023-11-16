@@ -7,7 +7,11 @@
 
   &__content {
     margin: 0 auto;
-    @include value-1400-460('width', 1400, 460);
+    @include value-1400-460('width', 1380, 460);
     height: 100%;
+
+    @media (max-width: 1420px) {
+      padding: 0 10px;
+    }
   }
 }
