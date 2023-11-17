@@ -1,0 +1,43 @@
+@import '@styles/__defines.scss';
+
+.photos {
+  ::before {
+    font-size: 40px !important;
+  }
+
+  &__title {
+    text-align: center;
+    padding-bottom: 32px;
+  }
+
+  &__slider {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__image {
+    @include value-1400-460('height', 934, 400);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.window {
+  height: min-content;
+  min-height: auto;
+  padding-bottom: 64px;
+}
+
+.photos__image,
+.photos__slider {
+  @include value-1400-460('width', 700, 300);
+}
