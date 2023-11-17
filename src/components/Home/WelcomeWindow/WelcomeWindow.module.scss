@@ -20,6 +20,12 @@
     border-radius: 15px;
     background: url('/assets/photoBridge.jpg'), lightgray 50% / cover no-repeat;
 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+
     @include value-1400-460('width', 540, 360);
     @include value-1400-460('height', 910, 770);
   }
