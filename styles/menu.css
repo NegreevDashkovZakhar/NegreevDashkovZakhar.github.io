@@ -40,3 +40,12 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 630px) {
+  .menu-block {
+    top: 55px;
+  }
+  .menu-block > a {
+    font-size: 12px;
+  }
+}

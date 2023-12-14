@@ -8,3 +8,23 @@
 
 .artist__description {
 }
+
+@media (max-width: 870px) {
+  .artist__name {
+    font-size: 20px;
+  }
+
+  .artist__description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 630px) {
+  .artist__name {
+    font-size: 16px;
+  }
+
+  .artist__description {
+    font-size: 12px;
+  }
+}
