@@ -27,7 +27,7 @@ const renderArtist = async () => {
   const entries_list = document.getElementById("entries_list");
   songs.forEach((song) => {
     entries_list.innerHTML += `<div class="list__entry">
-      <img class="entry__image" src="./images/artists/${song.artist_name}.jpg" alt="artist image" />
+      <img class="entry__image" src="./images/artists/${song.artist_name}.jpg" alt="artist image" onerror="this.src='images/icons/guitar.png';" />
       <a class="entry__song" href="${base_url}/song_page.html?id=${song.id}">"${song.song_name}"</a>
       <span> - </span>
       <a class="entry__author">${song.artist_name}</a>
