@@ -23,7 +23,7 @@ const renderArtist = async () => {
   const songChords = document.getElementById("song-chords");
   for (const chord of chords) {
     songChords.innerHTML += `
-  <img src="./images/chords/${chord.fileName}" class="song__chord" />
+  <img src="./images/chords/${chord.fileName}" class="song__chord" alt="${chord.fileName} chord" />
   `;
   }
 };

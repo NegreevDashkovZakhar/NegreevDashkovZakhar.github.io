@@ -39,7 +39,7 @@ const renderSongs = async () => {
 
 
     entries_list.innerHTML += `<div class="list__entry">
-      <img class="entry__image" src="./images/artists/${song.artist_name}.jpg" />
+      <img class="entry__image" src="./images/artists/${song.artist_name}.jpg" alt="artist image" />
       <a class="entry__song" href="${base_url}/song_page.html?id=${song.id}">"${song.song_name}"</a>
       <span> - </span>
       <a class="entry__author" href="${base_url}/artist_page.html?artist_name=${song.artist_name}">
