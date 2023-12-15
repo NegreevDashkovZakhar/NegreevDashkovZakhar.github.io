@@ -1,9 +1,9 @@
 const changeClass = "change";
 const menuBlock = ` 
-<div class="menu-block" id="menu-block">
+<nav class="menu-block" id="menu-block">
     <a href="index.html">Все песни</a>
     <a href="artists.html">Все исполнители</a>
-</div>`;
+</nav>`;
 
 const menuOnClick = () => {
   const menuIcon = document.getElementById("menu-icon");
