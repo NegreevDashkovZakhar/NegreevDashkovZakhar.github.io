@@ -4,6 +4,7 @@ body {
   background-color: #a0ced9;
   margin: 0;
   padding: 0;
+  padding-bottom: 66px;
 }
 
 header {
@@ -135,6 +136,20 @@ span {
   margin: 20px;
 }
 
+.footer-block {
+  background-color: #adf7b6;
+  padding: 20px 50px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-block > a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 20px;
+}
+
 @media (max-width: 870px) {
   header {
     padding: 10px;
@@ -174,9 +189,21 @@ span {
     font-size: 16px;
     margin: 10px;
   }
+
+  .footer-block {
+    padding: 15px 30px;
+  }
+  
+  .footer-block > a {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 630px) {
+  body {
+    padding-bottom: 46px;
+  }
+
   header {
     padding: 5px;
   }
@@ -256,5 +283,13 @@ span {
   .prompt__text {
     font-size: 12px;
     margin: 5px;
+  }
+
+  .footer-block {
+    padding: 10px;
+  }
+  
+  .footer-block > a {
+    font-size: 14px;
   }
 }

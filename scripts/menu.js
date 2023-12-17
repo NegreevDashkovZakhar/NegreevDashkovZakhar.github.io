@@ -4,6 +4,11 @@ const menuBlock = `
     <a href="index.html">Все песни</a>
     <a href="artists.html">Все исполнители</a>
 </nav>`;
+const footerBlock = ` 
+<footer class="footer-block" id="footer-block">
+    <a href="index.html">Все песни</a>
+    <a href="artists.html">Все исполнители</a>
+</footer>`;
 
 const menuOnClick = () => {
   const menuIcon = document.getElementById("menu-icon");
@@ -15,6 +20,9 @@ const menuOnClick = () => {
 const onLoad = () => {
   const headerElement = document.getElementById("header");
   headerElement.innerHTML = `${menuBlock} ${headerElement.innerHTML}`;
+
+  const bodyElement = document.getElementsByTagName('body')[0];
+  bodyElement.innerHTML += footerBlock;
 
   const menuElement = document.getElementById("menu-icon");
   menuElement.addEventListener("click", menuOnClick);
