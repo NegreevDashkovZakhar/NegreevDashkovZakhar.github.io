@@ -1,4 +1,4 @@
-import base_url from "./config.js";
+import {base_url} from "./config.js";
 
 const renderArtist = async () => {
   const queryString = window.location.search;
