@@ -1,4 +1,4 @@
-import base_url from "./config.js";
+import {base_url, site_url} from "./config.js";
 import PageCounter from "./pages.js";
 
 let pageCounter = new PageCounter();
@@ -40,7 +40,7 @@ const renderArtists = async () => {
 
     entries_list.innerHTML += `<div class="list__entry">
       <img class="entry__image" src="./images/artists/${artist.artist_name}.jpg" alt="artist image" onerror="this.src='images/icons/guitar.svg';" />
-      <a class="entry__author" href="${base_url}/artist_page.html?artist_name=${artist.artist_name}">
+      <a class="entry__author" href="${site_url}/artist_page.html?artist_name=${artist.artist_name}">
         ${artist.artist_name}
       </a>
       <p class="entry__right_column">${artist.songs_count}</p>

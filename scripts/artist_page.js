@@ -1,4 +1,4 @@
-import base_url from "./config.js";
+import {base_url,site_url} from "./config.js";
 
 const renderArtist = async () => {
   const queryString = window.location.search;
@@ -28,7 +28,7 @@ const renderArtist = async () => {
   songs.forEach((song) => {
     entries_list.innerHTML += `<div class="list__entry">
       <img class="entry__image" src="./images/artists/${song.artist_name}.jpg" alt="artist image" onerror="this.src='images/icons/guitar.svg';" />
-      <a class="entry__song" href="${base_url}/song_page.html?id=${song.id}">"${song.song_name}"</a>
+      <a class="entry__song" href="${site_url}/song_page.html?id=${song.id}">"${song.song_name}"</a>
       <span> - </span>
       <a class="entry__author">${song.artist_name}</a>
       <p class="entry__right_column">${song.song_year}</p>
