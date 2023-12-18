@@ -5,7 +5,7 @@ const renderArtist = async () => {
   const urlParams = new URLSearchParams(queryString);
   const song_id = urlParams.get("id");
 
-  const result = await fetch(`${base_url}/php/songs/by_id.php?id=${song_id}`);
+  const result = await fetch(`${base_url}/songs/by_id.php?id=${song_id}`);
   const song = await result.json();
   console.log(song);
 
@@ -16,7 +16,7 @@ const renderArtist = async () => {
   songText.innerText = song.song_text;
 
   const chordsResult = await fetch(
-    `${base_url}/php/songs/chords.php?id=${song_id}`
+    `${base_url}/songs/chords.php?id=${song_id}`
   );
   const chords = await chordsResult.json();
   console.log(chords);

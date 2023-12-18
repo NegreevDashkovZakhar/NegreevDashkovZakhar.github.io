@@ -6,7 +6,7 @@ let pageCounter = new PageCounter();
 let songs = [];
 
 const loadSongs = async () => {
-  const result = await fetch(`${base_url}/php/songs/all.php`);
+  const result = await fetch(`${base_url}/songs/all.php`);
   songs = await result.json();
 };
 
@@ -39,7 +39,7 @@ const renderSongs = async () => {
 
 
     entries_list.innerHTML += `<div class="list__entry">
-      <img class="entry__image" src="./images/artists/${song.artist_name}.jpg" alt="artist image" onerror="this.src='images/icons/guitar.png';" />
+      <img class="entry__image" src="./images/artists/${song.artist_name}.jpg" alt="artist image" onerror="this.src='images/icons/guitar.svg';" />
       <a class="entry__song" href="${base_url}/song_page.html?id=${song.id}">"${song.song_name}"</a>
       <span> - </span>
       <a class="entry__author" href="${base_url}/artist_page.html?artist_name=${song.artist_name}">

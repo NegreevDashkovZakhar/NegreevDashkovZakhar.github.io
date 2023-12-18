@@ -6,7 +6,7 @@ const renderArtist = async () => {
   const artist_name = urlParams.get("artist_name");
 
   const result = await fetch(
-    `${base_url}/php/artists/by_name.php?name=${artist_name}`
+    `${base_url}/artists/by_name.php?name=${artist_name}`
   );
   const artist = await result.json();
 
@@ -22,12 +22,12 @@ const renderArtist = async () => {
     description.innerHTML += `<p class="artist__description" id="description">${paragraph}</p>`;
   }
 
-  const songs_result = await fetch(`${base_url}/php/songs/by_artist.php?id=${artist.id}`);
+  const songs_result = await fetch(`${base_url}/songs/by_artist.php?id=${artist.id}`);
   const songs = await songs_result.json();
   const entries_list = document.getElementById("entries_list");
   songs.forEach((song) => {
     entries_list.innerHTML += `<div class="list__entry">
-      <img class="entry__image" src="./images/artists/${song.artist_name}.jpg" alt="artist image" onerror="this.src='images/icons/guitar.png';" />
+      <img class="entry__image" src="./images/artists/${song.artist_name}.jpg" alt="artist image" onerror="this.src='images/icons/guitar.svg';" />
       <a class="entry__song" href="${base_url}/song_page.html?id=${song.id}">"${song.song_name}"</a>
       <span> - </span>
       <a class="entry__author">${song.artist_name}</a>
