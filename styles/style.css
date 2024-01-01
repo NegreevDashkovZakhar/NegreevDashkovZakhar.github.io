@@ -1,6 +1,6 @@
 body {
   /* font: 0; */
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Mono', monospace;
   background-color: #a0ced9;
   margin: 0;
   padding: 0;
@@ -35,7 +35,7 @@ header {
 }
 
 .main__title {
-  font-family: "Roboto Mono";
+  font-family: 'Roboto Mono';
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -117,7 +117,7 @@ span {
   border: 3px solid #a0ced9;
   border-radius: 10px;
 
-  font-family: "Roboto Mono";
+  font-family: 'Roboto Mono';
   font-style: normal;
   font-weight: 400;
   line-height: 32px;
@@ -154,21 +154,21 @@ span {
   header {
     padding: 10px;
   }
-  
+
   .menu-icon,
   .guitar-icon {
     height: 40px;
     width: 40px;
   }
-  
+
   .main-name {
     font-size: 35px;
   }
-  
+
   .main {
     margin: 10px 30px;
   }
-  
+
   .main__title {
     font-size: 24px;
     line-height: 32px;
@@ -179,12 +179,12 @@ span {
     width: 500px;
     border: 2px solid #a0ced9;
   }
-  
+
   .prompt__title {
     font-size: 24px;
     margin: 10px 0;
   }
-  
+
   .prompt__text {
     font-size: 16px;
     margin: 10px;
@@ -193,7 +193,7 @@ span {
   .footer-block {
     padding: 15px 30px;
   }
-  
+
   .footer-block > a {
     font-size: 16px;
   }
@@ -207,79 +207,78 @@ span {
   header {
     padding: 5px;
   }
-  
+
   .menu-icon,
   .guitar-icon {
     height: 30px;
     width: 30px;
   }
-  
+
   .main-name {
     font-size: 26px;
   }
-  
+
   .main {
     margin: 10px 10px;
     padding: 10px;
   }
-  
+
   .main__title {
     font-size: 18px;
     line-height: 24px;
   }
-  
+
   .search-block__input {
     font-size: 24px;
     width: calc(100% - 60px);
   }
-  
+
   .search-block__icon {
     height: 30px;
     width: 30px;
     vertical-align: bottom;
     margin-top: 11px;
   }
-  
+
   .list__year {
     font-size: 12px;
   }
-  
+
   .list__entry {
     margin-bottom: 10px;
     font-size: 12px;
   }
-  
+
   .entry__image {
     width: 35px;
     height: 35px;
     margin-right: 5px;
   }
-  
+
   .entry__right_column {
     margin: 10px 0 0 auto;
   }
-  
+
   .entry__author,
   .entry__song {
     font-size: 12px;
   }
-  
+
   .list__entry > a,
   span {
     margin-top: 10px;
     font-size: 12px;
   }
-  
-  
+
   .prompt {
     width: calc(100% - 50px);
   }
-  
+
   .prompt__title {
     font-size: 18px;
     margin: 5px 0;
   }
-  
+
   .prompt__text {
     font-size: 12px;
     margin: 5px;
@@ -288,7 +287,7 @@ span {
   .footer-block {
     padding: 10px;
   }
-  
+
   .footer-block > a {
     font-size: 14px;
   }

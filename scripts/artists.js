@@ -1,5 +1,5 @@
-import {base_url, site_url} from "./config.js";
-import PageCounter from "./pages.js";
+import {base_url, site_url} from './config.js';
+import PageCounter from './pages.js';
 
 let pageCounter = new PageCounter();
 
@@ -11,19 +11,17 @@ const loadArtists = async () => {
 };
 
 const renderArtists = async () => {
-  const entries_list = document.getElementById("entries_list");
+  const entries_list = document.getElementById('entries_list');
   entries_list.innerHTML = '<p class="list__year">Песен</p>';
 
-  const searchedValue = document.getElementById("search-input").value;
+  const searchedValue = document.getElementById('search-input').value;
   const pageSize = pageCounter.pageSize;
   const pageStart = pageSize * (pageCounter.currentValue - 1);
   const pageEnd = pageSize * pageCounter.currentValue;
   let currentRecord = 0;
   for (let i = 0; i < artists.length; i++) {
     const artist = artists[i];
-    const wasSearched = artist.artist_name
-      .toUpperCase()
-      .includes(searchedValue.toUpperCase());
+    const wasSearched = artist.artist_name.toUpperCase().includes(searchedValue.toUpperCase());
     if (!wasSearched) {
       continue;
     }
@@ -48,10 +46,10 @@ const renderArtists = async () => {
   }
 
   pageCounter.render();
-  const decrementButton = document.getElementById("page-decrement");
-  decrementButton.addEventListener("click", decrementPage);
-  const incrementButton = document.getElementById("page-increment");
-  incrementButton.addEventListener("click", incrementPage);
+  const decrementButton = document.getElementById('page-decrement');
+  decrementButton.addEventListener('click', decrementPage);
+  const incrementButton = document.getElementById('page-increment');
+  incrementButton.addEventListener('click', incrementPage);
 };
 
 const decrementPage = () => {
@@ -73,10 +71,10 @@ const incrementPage = () => {
 };
 
 const onLoad = async () => {
-  const searchButton = document.getElementById("search-button");
-  searchButton.addEventListener("click", renderArtists);
+  const searchButton = document.getElementById('search-button');
+  searchButton.addEventListener('click', renderArtists);
   await loadArtists();
   renderArtists();
 };
 
-window.addEventListener("DOMContentLoaded", onLoad);
+window.addEventListener('DOMContentLoaded', onLoad);
