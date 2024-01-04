@@ -14,14 +14,14 @@ const renderArtists = async () => {
   const entries_list = document.getElementById('entries_list');
   entries_list.innerHTML = '<p class="list__year">Песен</p>';
 
-  const searchedValue = document.getElementById('search-input').value;
+  const searchedValue = document.getElementById('search-input')?.value ?? '';
   const pageSize = pageCounter.pageSize;
   const pageStart = pageSize * (pageCounter.currentValue - 1);
   const pageEnd = pageSize * pageCounter.currentValue;
   let currentRecord = 0;
   for (let i = 0; i < artists.length; i++) {
     const artist = artists[i];
-    const wasSearched = artist.artist_name.toUpperCase().includes(searchedValue.toUpperCase());
+    const wasSearched = artist.artist_name?.toUpperCase().includes(searchedValue.toUpperCase());
     if (!wasSearched) {
       continue;
     }

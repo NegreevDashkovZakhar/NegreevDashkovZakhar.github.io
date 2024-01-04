@@ -13,12 +13,9 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/svg+xml" sizes="any" href="/images/icons/guitar.svg" />
-    <script type="module" src="./scripts/login.js" defer></script>
+    <script type="module" src="./scripts/artists.js" defer></script>
+    <script type="module" src="../scripts/menu.js" defer></script>
     <title>Все песни</title>
-    <meta
-      name="description"
-      content="Список песен с аккордами. Год, название, аккорды для каждой песни. Удобный поиск. Узнайте больше о музыке!"
-    />
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
@@ -53,19 +50,39 @@
   </head>
   <body>
     <header id="header">
-      <img src="../images/icons/menu.svg" class="menu-icon" id="menu-icon" alt="menu burger icon" />
+      <img src="/images/icons/menu.svg" class="menu-icon" id="menu-icon" alt="menu burger icon" />
       <h1 class="main-name">Tab'em</h1>
-      <img src="../images/icons/guitar.svg" class="guitar-icon" alt="guitar icon" />
+      <img src="/images/icons/guitar.svg" class="guitar-icon" alt="guitar icon" />
     </header>
     <main class="main">
-      <h2 class="main__title">Авторизация администратора</h2>
-      <div class="admin-login__form">
-        <label for="login">Логин</label>
-        <input class="admin-login__text" type="text" name="login" id="login" />
-        <label for="password">Пароль</label>
-        <input class="admin-login__text" type="text" name="password" id="password" />
-        <input class="admin-login__submit" type="submit" value="Войти" id="sumbit" />
-      </div>
+      <form id="createForm">
+        <h2>Create Artist</h2>
+        <label for="createName">Name:</label>
+        <br />
+        <input type="text" id="createName" name="createName" required />
+        <br />
+        <label for="createDescription">Description:</label>
+        <br />
+        <textarea id="createDescription" name="createDescription" required></textarea>
+        <br />
+        <button type="submit">Create</button>
+      </form>
+
+      <!-- Artist Table -->
+      <h2>Artists</h2>
+      <table id="artistTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Artist rows will be dynamically added here -->
+        </tbody>
+      </table>
     </main>
   </body>
 </html>

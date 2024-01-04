@@ -10,15 +10,17 @@ function get_artists_songs_count()
     $result = pg_query(
         $connect,
         'SELECT 
+            artists.id,
             artists.name,
+            artists.description,
             COUNT(*) AS songs_count 
         FROM songs 
-        JOIN artists ON songs.artist_id=artists.id 
-        GROUP BY artists.name;'
+        RIGHT JOIN artists ON songs.artist_id=artists.id 
+        GROUP BY artists.id;'
     );
     $array = array();
     while ($row = pg_fetch_row($result)) {
-        $entry = new SongsCount($row[0], $row[1]);
+        $entry = new SongsCount($row[0], $row[1], $row[2], $row[3]);
         $array[] = $entry;
     }
     pg_close($connect);
@@ -117,6 +119,7 @@ function get_chords($songId)
     $result = pg_query(
         $connect,
         "SELECT 
+            chords.id,
             chords.name,
             chords.image_name
         FROM chords
@@ -125,7 +128,27 @@ function get_chords($songId)
     );
     $array = array();
     while ($row = pg_fetch_row($result)) {
-        $entry = new Chord($row[0], $row[1]);
+        $entry = new Chord($row[0], $row[1], $row[2]);
+        $array[] = $entry;
+    }
+    pg_close($connect);
+    return $array;
+}
+
+function get_all_chords()
+{
+    $connect = pg_connect('host=localhost port=5432 dbname=tab_em_db user=tab_em_user password=pass1234');
+    $result = pg_query(
+        $connect,
+        "SELECT 
+            chords.id,
+            chords.name,
+            chords.image_name
+        FROM chords;"
+    );
+    $array = array();
+    while ($row = pg_fetch_row($result)) {
+        $entry = new Chord($row[0], $row[1], $row[2]);
         $array[] = $entry;
     }
     pg_close($connect);
