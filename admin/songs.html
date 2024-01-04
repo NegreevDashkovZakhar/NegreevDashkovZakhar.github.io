@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/menu.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/images/icons/guitar.svg" />
+    <script type="module" src="./scripts/songs.js" defer></script>
+    <script type="module" src="../scripts/menu.js" defer></script>
+    <title>Все песни</title>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+      ym(95907762, 'init', {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+      });
+    </script>
+    <noscript
+      ><div><img src="https://mc.yandex.ru/watch/95907762" style="position: absolute; left: -9999px" alt="" /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
+  </head>
+  <body>
+    <header id="header">
+      <img src="/images/icons/menu.svg" class="menu-icon" id="menu-icon" alt="menu burger icon" />
+      <h1 class="main-name">Tab'em</h1>
+      <img src="/images/icons/guitar.svg" class="guitar-icon" alt="guitar icon" />
+    </header>
+    <main class="main">
+      <form id="createForm">
+        <h2>Create Song</h2>
+        <label for="createName">Name:</label>
+        <br />
+        <input type="text" id="createName" name="createName" required />
+        <br />
+        <label for="year">Year</label>
+        <br />
+        <input type="text" id="year" name="year" required />
+        <br />
+        <label for="createText">Text:</label>
+        <br />
+        <textarea id="createText" name="createText" required></textarea>
+        <br />
+        <label for="chords">Select Chords</label>
+        <br />
+        <select id="chords" name="chords[]" multiple></select>
+        <br />
+        <label for="artist">Select artist</label>
+        <br />
+        <select id="artist" name="artist"></select>
+        <br />
+        <button type="submit">Create</button>
+        <input type="text" id="login" name="login" hidden />
+        <input type="text" id="password" name="password" hidden />
+      </form>
+
+      <!-- Artist Table -->
+      <h2>Artists</h2>
+      <table id="songTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th><pre>Text</pre></th>
+            <th>Artist</th>
+            <th>Year</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Artist rows will be dynamically added here -->
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>

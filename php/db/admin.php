@@ -26,6 +26,22 @@ function delete_artist($artist_id)
     return $result;
 }
 
+function add_chords($song_id, &$data)
+{
+    $chords = $data['chords'];
+    unset($data["chords"]);
+    $connect = pg_connect('host=localhost port=5432 dbname=tab_em_db user=tab_em_user password=pass1234');
+    pg_query(
+        $connect,
+        "DELETE FROM songs_chords WHERE song_id = '$song_id'"
+    );
+
+    foreach ($chords as $chordId) {
+        pg_insert($connect, 'songs_chords', array("chord_id" => $chordId, "song_id" => $song_id));
+    }
+    pg_close($connect);
+}
+
 function add_song($song)
 {
     $connect = pg_connect('host=localhost port=5432 dbname=tab_em_db user=tab_em_user password=pass1234');
@@ -38,6 +54,8 @@ function add_song($song)
 function update_song($song_id, $song)
 {
     $connect = pg_connect('host=localhost port=5432 dbname=tab_em_db user=tab_em_user password=pass1234');
+    add_chords($song_id, $song);
+
     $condition = array('id' => $song_id);
     $result = pg_update($connect, 'artists', $song, $condition);
     pg_close($connect);
