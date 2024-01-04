@@ -79,8 +79,14 @@ function populateTable(artists) {
   });
 }
 
-document.getElementById('createForm').addEventListener('submit', function (event) {
+// document.getElementById('createForm').setAttribute('action', `${base_url}/artists/create.php`);
+// document.getElementById('login').setAttribute('value', localStorage.getItem('login'));
+// document.getElementById('password').setAttribute('value', localStorage.getItem('password'));
+
+const create = (event) => {
   event.preventDefault();
+  event.stopPropagation();
+  event.stopImmediatePropagation();
   const formData = {
     login: localStorage.getItem('login'),
     password: localStorage.getItem('password'),
@@ -92,4 +98,6 @@ document.getElementById('createForm').addEventListener('submit', function (event
     method: 'POST',
     body: JSON.stringify(formData),
   }).catch((error) => console.error('Error creating artist:', error));
-});
+};
+
+document.getElementById('createForm').setAttribute('onsumbit', create);
