@@ -33,37 +33,37 @@ function fetchArtists() {
     .catch((error) => console.error('Error fetching artists:', error));
 }
 
-// function editArtist(artistId) {
-//   const description = document.getElementById('createDescription').value;
-//   const name = document.getElementById('createName').value;
-//   fetch(`${base_url}/artists/update.php`, {
-//     method: 'UPDATE',
-//     body: JSON.stringify({
-//       login: localStorage.getItem('login'),
-//       password: localStorage.getItem('password'),
-//       name: name.length > 0 ? name : undefined,
-//       description: description.length > 0 ? description : undefined,
-//       id: artistId,
-//     }),
-//   })
-//     .then((response) => fetchArtists())
-//     .catch((error) => console.error('Error fetching artist details:', error));
-// }
+function editArtist(artistId) {
+  const description = document.getElementById('createDescription').value;
+  const name = document.getElementById('createName').value;
+  fetch(`${base_url}/artists/update.php`, {
+    method: 'UPDATE',
+    body: JSON.stringify({
+      login: localStorage.getItem('login'),
+      password: localStorage.getItem('password'),
+      name: name.length > 0 ? name : undefined,
+      description: description.length > 0 ? description : undefined,
+      id: artistId,
+    }),
+  })
+    .then((response) => fetchArtists())
+    .catch((error) => console.error('Error fetching artist details:', error));
+}
 
-// function deleteArtist(artistId) {
-//   fetch(`${base_url}/artists/delete.php`, {
-//     method: 'DELETE',
-//     body: JSON.stringify({
-//       login: localStorage.getItem('login'),
-//       password: localStorage.getItem('password'),
-//       id: artistId,
-//     }),
-//   })
-//     .then((data) => {
-//       fetchArtists();
-//     })
-//     .catch((error) => console.error('Error deleting artist:', error));
-// }
+function deleteArtist(artistId) {
+  fetch(`${base_url}/artists/delete.php`, {
+    method: 'DELETE',
+    body: JSON.stringify({
+      login: localStorage.getItem('login'),
+      password: localStorage.getItem('password'),
+      id: artistId,
+    }),
+  })
+    .then((data) => {
+      fetchArtists();
+    })
+    .catch((error) => console.error('Error deleting artist:', error));
+}
 
 function populateTable(artists) {
   artists = artists.sort(function (a, b) {
