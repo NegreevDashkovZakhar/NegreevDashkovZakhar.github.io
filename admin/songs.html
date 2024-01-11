@@ -13,7 +13,6 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/svg+xml" sizes="any" href="/images/icons/guitar.svg" />
-    <script type="module" src="./scripts/songs.js" defer></script>
     <script type="module" src="../scripts/menu.js" defer></script>
     <title>Все песни</title>
     <!-- Yandex.Metrika counter -->
@@ -69,7 +68,7 @@
         <br />
         <textarea id="createText" name="createText" required></textarea>
         <br />
-        <label for="chords">Select Chords</label>
+        <label for="chords[]">Select Chords</label>
         <br />
         <select id="chords" name="chords[]" multiple></select>
         <br />
@@ -78,8 +77,6 @@
         <select id="artist" name="artist"></select>
         <br />
         <button type="submit">Create</button>
-        <input type="text" id="login" name="login" hidden />
-        <input type="text" id="password" name="password" hidden />
       </form>
 
       <!-- Artist Table -->
@@ -101,4 +98,5 @@
       </table>
     </main>
   </body>
+  <script type="module" src="./scripts/songs.js" defer></script>
 </html>

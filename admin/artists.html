@@ -13,7 +13,6 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/svg+xml" sizes="any" href="/images/icons/guitar.svg" />
-    <script type="module" src="./scripts/artists.js" defer></script>
     <script type="module" src="../scripts/menu.js" defer></script>
     <title>Все песни</title>
     <!-- Yandex.Metrika counter -->
@@ -59,18 +58,17 @@
         <h2>Create Artist</h2>
         <label for="createName">Name:</label>
         <br />
-        <input type="text" id="createName" name="createName" required />
+        <input type="text" id="createName" name="createName" />
         <br />
         <label for="createDescription">Description:</label>
         <br />
-        <textarea id="createDescription" name="createDescription" required></textarea>
+        <textarea id="createDescription" name="createDescription"></textarea>
         <br />
-        <button type="submit">Create</button>
-        <input type="text" id="login" name="login" hidden />
-        <input type="text" id="password" name="password" hidden />
+        <button>Create</button>
+        <!-- <input type="text" id="login" name="login" hidden /> -->
+        <!-- <input type="text" id="password" name="password" hidden /> -->
       </form>
 
-      <!-- Artist Table -->
       <h2>Artists</h2>
       <table id="artistTable">
         <thead>
@@ -81,10 +79,9 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody>
-          <!-- Artist rows will be dynamically added here -->
-        </tbody>
+        <tbody></tbody>
       </table>
     </main>
   </body>
+  <script type="module" src="./scripts/artists.js" defer></script>
 </html>

@@ -1,4 +1,5 @@
 <?php
+require 'db.php';
 
 function add_artist($artist)
 {
@@ -45,28 +46,51 @@ function add_chords($song_id, &$data)
 function add_song($song)
 {
     $connect = pg_connect('host=localhost port=5432 dbname=tab_em_db user=tab_em_user password=pass1234');
-    $result = pg_insert($connect, 'artists', $song);
-
+    $result = pg_insert(
+        $connect,
+        'songs',
+        array(
+            "name" => $song['name'],
+            "song_text" => $song['text'],
+            "year" => $song['year'],
+            "artist_id" => $song['artist_id']
+        )
+    );
     pg_close($connect);
+
+    $songs = get_all_songs();
+    $song_entry = end($songs);
+
+    add_chords($song_entry->id, $song);
+
     return $result;
 }
 
 function update_song($song_id, $song)
 {
     $connect = pg_connect('host=localhost port=5432 dbname=tab_em_db user=tab_em_user password=pass1234');
-    add_chords($song_id, $song);
 
     $condition = array('id' => $song_id);
-    $result = pg_update($connect, 'artists', $song, $condition);
+    $result = pg_update($connect, 'songs', array(
+        "name" => $song['name'],
+        "song_text" => $song['text'],
+        "year" => $song['year'],
+        "artist_id" => $song['artist_id']
+    ), $condition);
     pg_close($connect);
+
+    add_chords($song_id, $song);
     return $result;
 }
 
 function delete_song($song_id)
 {
+    $empty_chords = array("chords" => array());
+    add_chords($song_id, $empty_chords);
+
     $connect = pg_connect('host=localhost port=5432 dbname=tab_em_db user=tab_em_user password=pass1234');
     $condition = array('id' => $song_id);
-    $result = pg_delete($connect, 'artists', $condition);
+    $result = pg_delete($connect, 'songs', $condition);
     pg_close($connect);
     return $result;
 }

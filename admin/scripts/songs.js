@@ -3,6 +3,12 @@ import {base_url} from '../../scripts/config.js';
 document.addEventListener('DOMContentLoaded', function () {
   fetchOptions();
   fetchSongs();
+
+  const form = document.getElementById('createForm');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    create();
+  });
 });
 
 function fetchOptions() {
@@ -39,19 +45,20 @@ function fetchSongs() {
 }
 
 function editSong(songId) {
-  const text = document.getElementById('createText').value;
-  const name = document.getElementById('createName').value;
-  const chords = document.getElementById('chords[]').value;
-  const song = document.getElementById('song').value;
+  const formData = {
+    login: localStorage.getItem('login'),
+    password: localStorage.getItem('password'),
+    name: document.getElementById('createName').value,
+    text: document.getElementById('createText').value,
+    chords: [...document.getElementById('chords').children].filter((opt) => opt.selected).map((opt) => opt.value),
+    artist_id: document.getElementById('artist').value,
+    year: document.getElementById('year').value,
+  };
+
   fetch(`${base_url}/songs/update.php`, {
     method: 'UPDATE',
     body: JSON.stringify({
-      login: localStorage.getItem('login'),
-      password: localStorage.getItem('password'),
-      name: name.length > 0 ? name : undefined,
-      description: text.length > 0 ? text : undefined,
-      chords,
-      song,
+      ...formData,
       id: songId,
     }),
   })
@@ -85,17 +92,17 @@ function populateTable(songs) {
   songs.forEach((song) => {
     const row = tableBody.insertRow();
     row.innerHTML = `<td>${song.id}</td>
-                          <td>${song.song_name}</td>
-                          <td><pre>${song.song_text}</pre></td>
-                          <td>${song.song_name}</td>
-                          <td>${song.song_year}</td>
-                          <td>
-                              <button class="edit-button" data-song-id="${song.id}">Edit</button>
-                              <button class="delete-button" data-song-id="${song.id}">Delete</button>
-                          </td>`;
+                    <td>${song.song_name}</td>
+                    <td><pre>${song.song_text}</pre></td>
+                    <td>${song.artist_name}</td>
+                    <td>${song.song_year}</td>
+                    <td>
+                        <button class="edit-button" data-song-id="${song.id}">Edit</button>
+                        <button class="delete-button" data-song-id="${song.id}">Delete</button>
+                    </td>`;
   });
 
-  tableBody.addEventListener('click', function (event) {
+  tableBody.addEventListener('mouseup', function (event) {
     const target = event.target;
 
     if (target.classList.contains('edit-button')) {
@@ -110,28 +117,23 @@ function populateTable(songs) {
   });
 }
 
-// document.getElementById('createForm').setAttribute('action', `${base_url}/songs/create.php`);
-// document.getElementById('login').setAttribute('value', localStorage.getItem('login'));
-// document.getElementById('password').setAttribute('value', localStorage.getItem('password'));
-
-const create = (event) => {
-  event.preventDefault();
-  event.stopPropagation();
-  event.stopImmediatePropagation();
+const create = () => {
   const formData = {
     login: localStorage.getItem('login'),
     password: localStorage.getItem('password'),
     name: document.getElementById('createName').value,
     text: document.getElementById('createText').value,
-    text: document.getElementById('chords[]').value,
-    text: document.getElementById('song').value,
+    chords: [...document.getElementById('chords').children].filter((opt) => opt.selected).map((opt) => opt.value),
+    artist_id: document.getElementById('artist').value,
     year: document.getElementById('year').value,
   };
 
   fetch(`${base_url}/songs/create.php`, {
     method: 'POST',
     body: JSON.stringify(formData),
-  }).catch((error) => console.error('Error creating song:', error));
+  })
+    .then((response) => {
+      fetchSongs();
+    })
+    .catch((error) => console.error('Error creating song:', error));
 };
-
-document.getElementById('createForm').setAttribute('onsumbit', create);
