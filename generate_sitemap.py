@@ -77,7 +77,7 @@ def get_all_artists():
   return result
 
 
-with open("generate_sitemap.xml", "w") as file:
+with open("sitemap.xml", "w") as file:
     file.write(default_content)
     file.write(get_all_songs())
     file.write(get_all_artists())
