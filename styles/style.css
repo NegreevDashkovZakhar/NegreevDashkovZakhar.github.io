@@ -25,6 +25,13 @@ header {
   margin: 0;
 }
 
+.main-link {
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
 .main {
   margin: 19px 50px;
   background-color: #adf7b6;
