@@ -7,7 +7,6 @@ const renderArtist = async () => {
 
   const result = await fetch(`${base_url}/songs/by_id.php?id=${song_id}`);
   const song = await result.json();
-  console.log(song);
 
   const songTitle = document.getElementById('song-title');
   songTitle.innerText = `${song.song_name} - ${song.artist_name}`;
@@ -17,7 +16,6 @@ const renderArtist = async () => {
 
   const chordsResult = await fetch(`${base_url}/songs/chords.php?id=${song_id}`);
   const chords = await chordsResult.json();
-  console.log(chords);
   const songChords = document.getElementById('song-chords');
   for (const chord of chords) {
     songChords.innerHTML += `

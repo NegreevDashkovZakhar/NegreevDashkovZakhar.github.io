@@ -38,3 +38,9 @@
     width: 70px;
   }
 }
+
+@media print {
+  .song__text {
+    display: inline;
+  }
+}
