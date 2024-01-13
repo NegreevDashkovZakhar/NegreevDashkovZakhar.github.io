@@ -8,6 +8,20 @@ const renderArtist = async () => {
   const result = await fetch(`${base_url}/artists/by_name.php?name=${artist_name}`);
   const artist = await result.json();
 
+  const metaDescription = document.createElement('meta');
+  metaDescription.name = 'description';
+  metaDescription.content = `Вся информация о песнях, биографии исполнителя ${artist.name}. А также аккорды к песням!`;
+  document.getElementsByTagName('head')[0].appendChild(metaDescription);
+
+  const metaKeyword = document.createElement('meta');
+  metaKeyword.name = 'keywords';
+  metaKeyword.content = `Аккорды, ${artist.name}, Музыка ${artist.name}, Гитара, Игра на гитаре, Музыкальные группы, Музыкальные исполнители, Аккорды ${artist.name}, Песни для новичков`;
+  document.getElementsByTagName('head')[0].appendChild(metaKeyword);
+
+  const title = document.createElement('title');
+  title.innerText = `${artist.name}`;
+  document.getElementsByTagName('head')[0].appendChild(title);
+
   const image = document.getElementById('artist-image');
   image.setAttribute('src', `./images/artists/${artist.name}.jpg`);
 
