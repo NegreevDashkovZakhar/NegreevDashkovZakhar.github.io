@@ -4,27 +4,94 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-<url>
-  <loc>https://negreevdashkovzakhar.github.io/</loc>
-  <lastmod>2023-12-22T21:39:59+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://negreevdashkovzakhar.github.io/artists.html</loc>
-  <lastmod>2023-12-22T21:39:59+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://negreevdashkovzakhar.github.io/artist_page.html</loc>
-  <lastmod>2023-12-22T21:39:59+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://negreevdashkovzakhar.github.io/song_page.html</loc>
-  <lastmod>2023-12-22T21:39:59+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-
+    <url>
+        <loc>https://negreevdashkovzakhar.github.io/</loc>
+        <lastmod>2023-12-22T21:39:59+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://negreevdashkovzakhar.github.io/artists.html</loc>
+        <lastmod>2023-12-22T21:39:59+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://negreevdashkovzakhar.github.io/song_page.html?id=1</loc>
+        <lastmod>2024-01-13T18:38:01+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://negreevdashkovzakhar.github.io/song_page.html?id=2</loc>
+        <lastmod>2024-01-13T18:38:01+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://negreevdashkovzakhar.github.io/song_page.html?id=3</loc>
+        <lastmod>2024-01-13T18:38:01+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://negreevdashkovzakhar.github.io/song_page.html?id=4</loc>
+        <lastmod>2024-01-13T18:38:01+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://negreevdashkovzakhar.github.io/song_page.html?id=5</loc>
+        <lastmod>2024-01-13T18:38:01+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://negreevdashkovzakhar.github.io/song_page.html?id=6</loc>
+        <lastmod>2024-01-13T18:38:01+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://negreevdashkovzakhar.github.io/song_page.html?id=7</loc>
+        <lastmod>2024-01-13T18:38:01+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://negreevdashkovzakhar.github.io/song_page.html?id=9</loc>
+        <lastmod>2024-01-13T18:38:01+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://negreevdashkovzakhar.github.io/artist_page.html?id=1</loc>
+        <lastmod>2024-01-13T18:38:01+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://negreevdashkovzakhar.github.io/artist_page.html?id=2</loc>
+        <lastmod>2024-01-13T18:38:01+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://negreevdashkovzakhar.github.io/artist_page.html?id=3</loc>
+        <lastmod>2024-01-13T18:38:01+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://negreevdashkovzakhar.github.io/artist_page.html?id=4</loc>
+        <lastmod>2024-01-13T18:38:01+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://negreevdashkovzakhar.github.io/artist_page.html?id=5</loc>
+        <lastmod>2024-01-13T18:38:01+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://negreevdashkovzakhar.github.io/artist_page.html?id=6</loc>
+        <lastmod>2024-01-13T18:38:01+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://negreevdashkovzakhar.github.io/artist_page.html?id=8</loc>
+        <lastmod>2024-01-13T18:38:01+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://negreevdashkovzakhar.github.io/artist_page.html?id=9</loc>
+        <lastmod>2024-01-13T18:38:01+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
 </urlset>
