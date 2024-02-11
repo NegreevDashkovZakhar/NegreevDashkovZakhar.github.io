@@ -1,0 +1,9 @@
+@import '@styles/__defines.scss';
+
+.home {
+  background-color: $theme-1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

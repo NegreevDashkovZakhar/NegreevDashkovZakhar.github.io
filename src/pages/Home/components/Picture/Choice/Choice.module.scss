@@ -1,0 +1,9 @@
+.choice {
+  display: flex;
+  gap: 5px;
+  &__image {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+  }
+}
