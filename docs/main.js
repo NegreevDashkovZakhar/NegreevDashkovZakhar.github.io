@@ -4367,7 +4367,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 // extracted by mini-css-extract-plugin
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"home":"Fbzsv4JGmr27P6FOoLOO"});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"home":"Fbzsv4JGmr27P6FOoLOO","home__title":"P8SdPy1L6gOc4ywvwo9Y"});
 
 /***/ }),
 
@@ -42310,7 +42310,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Home = function () {
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: _Home_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"]['home'], children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_Picture_Picture__WEBPACK_IMPORTED_MODULE_1__["default"], {}) }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: _Home_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"]['home'], children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { className: _Home_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"]['home__title'], children: "\u042D\u0442\u043E \u043C\u044B \u0433\u0443\u043B\u044F\u0435\u043C?" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_Picture_Picture__WEBPACK_IMPORTED_MODULE_1__["default"], {})] }));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);
 
